@@ -5,8 +5,8 @@ import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 
-export default function About() {
-  const { ref } = useSectionInView("Sobre");
+export default function Address() {
+  const { ref } = useSectionInView("Endereço");
 
   return (
     <motion.section
@@ -15,12 +15,13 @@ export default function About() {
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
-      id="about"
+      id="address"
     >
-      <SectionHeading>Sobre mim</SectionHeading>
-      <p className="mb-3 text-justify sm:text-center">
-        Me chamo Luma Beatriz, tenho 23 anos e sou psicóloga clínica. Minha abordagem e a TCC ( Terapia Cognitivo Comportamental), tenho capacitações para técnicas em TCC. Atendo presencialmente crianças a partir de 8 anos, adolescentes, adultos e idosos. Atendo de maneira online adolescentes e adultos. É um imenso prazer tá recebendo você aqui nesse perfil, na qual iremos abordar sobre ansiedade, emoções, relacionamento, depressão, autoestima, amor próprio e várias outras temáticas, voltada para o autoconhecimento e saúde menta.
-      </p>
+      <SectionHeading>Onde me encontrar</SectionHeading>
+      <div className="p-4 bg-white rounded-md">
+        <p>MULTICLINIC SAÚDE & VIDA 🧠</p>
+        <iframe className="rounded-sm w-[350px] h-[250px] md:w-[600px] md:h-[450px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d995.3323694285639!2d-38.55387893040126!3d-3.7381983615131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c74973e0bfc1ed%3A0x3ef9e2b86f331d6!2sR.%20Padre%20Guerra%2C%20981%20-%20Parquel%C3%A2ndia%2C%20Fortaleza%20-%20CE%2C%2060455-365!5e0!3m2!1spt-BR!2sbr!4v1731382959992!5m2!1spt-BR!2sbr" width="600" height="450" style={{border:0}} allowFullScreen={undefined} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
       {/* <p>
         <span className="italic">When I'm not coding</span>, I enjoy playing
