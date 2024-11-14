@@ -20,6 +20,7 @@ export default function Home() {
       <SectionDivider />
       {/* <Experience /> */}
       <Address />
+      <SectionDivider />
       <Contact />
     </main>
   );

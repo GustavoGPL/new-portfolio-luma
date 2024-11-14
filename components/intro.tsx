@@ -61,8 +61,8 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold text-[#735C3A]">Luma Beatriz Freitas Mesquita</span>
-        <span className="font-bold text-[#735C3A]">Psicóloga | <span className="font-bold underline"><Link href={'http://www.cadastro.cfp.org.br/visualizar.html?profissional=wLJZIOQ7UmuX3IpQVW0YgFxV0T1RQ5QCGN3OriOooWE%3D'} target="_blank">CRP 11/19857</Link></span></span>
+        <span className="font-bold text-[#735C3A] dark:text-[#caa266]">Luma Beatriz Freitas Mesquita</span>
+        <span className="font-bold text-[#735C3A] dark:text-[#caa266]">Psicóloga | <span className="font-bold underline"><Link href={'http://www.cadastro.cfp.org.br/visualizar.html?profissional=wLJZIOQ7UmuX3IpQVW0YgFxV0T1RQ5QCGN3OriOooWE%3D'} target="_blank">CRP 11/19857</Link></span></span>
       </motion.h1>
 
       <motion.div
@@ -96,27 +96,27 @@ export default function Intro() {
 
         <div className="flex flex-row gap-2">
           <Link
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/20 dark:text-white/60"
             href="https://www.instagram.com/psi_lumabeatriz/"
             target="_blank"
           >
-            <FaInstagram size={25} color="#735C3A" />
+            <FaInstagram size={25} color="#735C3A" className="dark:!text-[#caa266]"/>
           </Link>
 
           <Link
-            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/20 dark:text-white/60"
             href="https://api.whatsapp.com/send?phone=5585987819145"
             target="_blank"
           >
-            <FaWhatsapp size={25} color="#735C3A" />
+            <FaWhatsapp size={25} color="#735C3A" className="dark:!text-[#caa266]"/>
           </Link>
 
           <Link
-            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/20 dark:text-white/60"
             href="mailto:lumabeatrizpsi@gmail.com"
             target="_blank"
           >
-            <IoMailOutline size={25} color="#735C3A" />
+            <IoMailOutline size={25} color="#735C3A" className="dark:!text-[#caa266]"/>
           </Link>
         </div>
       </motion.div>

@@ -26,12 +26,12 @@ export const links = [
   //   hash: "#experience",
   // },
   {
-    name: "Contato",
-    hash: "#contact",
-  },
-  {
     name: "Endereço",
     hash: "#address",
+  },
+  {
+    name: "Contato",
+    hash: "#contact",
   },
 ] as const;
 
