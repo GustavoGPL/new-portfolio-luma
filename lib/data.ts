@@ -1,6 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import projetoLuma from "@/public/images/ProjetoLuma.png";
 
@@ -21,10 +19,10 @@ export const links = [
     name: "Habilidades",
     hash: "#skills",
   },
-  // {
-  //   name: "Experiência",
-  //   hash: "#experience",
-  // },
+  {
+    name: "Experiência",
+    hash: "#experience",
+  },
   {
     name: "Endereço",
     hash: "#address",
@@ -35,36 +33,27 @@ export const links = [
   },
 ] as const;
 
-// export const experiencesData = [
-//   {
-//     title: "Graduated bootcamp",
-//     location: "Miami, FL",
-//     description:
-//       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-//     icon: React.createElement(LuGraduationCap),
-//     date: "2019",
-//   },
-//   {
-//     title: "Front-End Developer",
-//     location: "Orlando, FL",
-//     description:
-//       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-//     icon: React.createElement(CgWorkAlt),
-//     date: "2019 - 2021",
-//   },
-//   {
-//     title: "Full-Stack Developer",
-//     location: "Houston, TX",
-//     description:
-//       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-//     icon: React.createElement(FaReact),
-//     date: "2021 - present",
-//   },
-// ] as const;
+export const experiencesData = [
+  {
+    title: "MBA em Gestão de Pessoas",
+    location: "Fortaleza, CE",
+    description:
+      "Pós-graduada em MBA em Gestão de Pessoas",
+    icon: React.createElement(LuGraduationCap),
+    date: "2023",
+  },
+  {
+    title: "Formação Psicologia",
+    location: "Fortaleza, CE",
+     description: "Graduação completa em Psicologia, com foco no desenvolvimento humano, saúde mental e técnicas de intervenção psicológica",
+    icon: React.createElement(LuGraduationCap),
+    date: "2018 - 2022",
+  },
+] as const;
 
 export const projectsData = [
   {
-    title: "Projeto para Universitários",
+    title: "Escuta e Afeto",
     description:
       "Projeto de atendimento psicológico para universitários a preços acessíveis",
     tags: ["praticidade", "flexibilidade", "Acessibilidade"],
@@ -77,5 +66,8 @@ export const skillsData = [
   "Psicóloga Clínica",
   "Pós-graduada em Gestão de Pessoas",
   "Terapia Cognitivo Comportamental",
-  "Capacitações para técnicas em TCC"
+  "Capacitações para técnicas em TCC",
+  "Atuação na área clínica, com experiência em acompanhamento psicológico",
+  "Atendimento infantojuvenil, ajudando crianças e adolescentes",
+  "Atendimentos de Adultos e Idosos"
 ] as const;

@@ -13,3 +13,7 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}

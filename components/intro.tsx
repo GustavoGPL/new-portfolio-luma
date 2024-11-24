@@ -20,6 +20,7 @@ export default function Intro() {
       id="home"
       className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
     >
+      {/* <div className="flex gap-5 mb-8"> */}
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -61,9 +62,10 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold text-[#735C3A] dark:text-[#caa266]">Luma Beatriz Freitas Mesquita</span>
-        <span className="font-bold text-[#735C3A] dark:text-[#caa266]">Psicóloga | <span className="font-bold underline"><Link href={'http://www.cadastro.cfp.org.br/visualizar.html?profissional=wLJZIOQ7UmuX3IpQVW0YgFxV0T1RQ5QCGN3OriOooWE%3D'} target="_blank">CRP 11/19857</Link></span></span>
+        <span className="font-bold text-[#57694a] dark:text-[#caa266]">Luma Beatriz Freitas Mesquita</span>
+        <span className="font-bold text-[#57694a] dark:text-[#caa266]">Psicóloga | CRP 11/19857</span>
       </motion.h1>
+      {/* </div> */}
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
@@ -82,7 +84,7 @@ export default function Intro() {
           }}
         >
           Agende seu atendimento{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
 
         {/* <a

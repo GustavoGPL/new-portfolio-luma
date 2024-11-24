@@ -11,7 +11,7 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 max-w-[45rem] text-[#534329] text-center leading-8 sm:mb-10 scroll-mt-28 dark:text-[#caa266]"
+      className="mb-28 max-w-[45rem] text-[#46553c] text-center leading-8 sm:mb-10 scroll-mt-28 dark:text-[#caa266]"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>Sobre mim</SectionHeading>
       <p className="mb-3 text-justify sm:text-center dark:text-white/80">
-        Me chamo Luma Beatriz, tenho 23 anos e sou psicóloga clínica. Minha abordagem e a TCC ( Terapia Cognitivo Comportamental), tenho capacitações para técnicas em TCC. Atendo presencialmente crianças a partir de 8 anos, adolescentes, adultos e idosos. Atendo de maneira online adolescentes e adultos. É um imenso prazer tá recebendo você aqui nesse perfil, na qual iremos abordar sobre ansiedade, emoções, relacionamento, depressão, autoestima, amor próprio e várias outras temáticas, voltada para o autoconhecimento e saúde menta.
+      Sou psicóloga e atendo crianças, adolescentes, adultos e idosos, oferecendo um espaço acolhedor e seguro para tratar questões emocionais e comportamentais. Trabalho com escuta empática, utilizando abordagens personalizadas para cada faixa etária. Seja para auxiliar no desenvolvimento infantil, enfrentar desafios da adolescência, lidar com o estresse da vida adulta ou proporcionar qualidade de vida na terceira idade, estou aqui para ajudar!
       </p>
 
       {/* <p>

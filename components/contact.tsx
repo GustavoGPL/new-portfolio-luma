@@ -16,7 +16,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center text-[#534329] dark:text-[#caa266]"
+      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center text-[#46553c] dark:text-[#caa266]"
       initial={{
         opacity: 0,
       }}
@@ -30,11 +30,11 @@ export default function Contact() {
         once: true,
       }}
     >
-      <SectionHeading>Entre em contato comigo</SectionHeading>
+      <SectionHeading>Entre em contato</SectionHeading>
 
-      <p className="text-[#534329] -mt-6 dark:text-white/80">
+      <p className="text-[#46553c] -mt-6 dark:text-white/80">
       Por favor entre em contato comigo diretamente em{" "}
-        <Link className="underline" href="mailto:lumabeatrizpsi@gmail.com" target="_blank">
+        <Link className="underline font-bold" href="mailto:lumabeatrizpsi@gmail.com" target="_blank">
         lumabeatrizpsi@gmail.com
         </Link>{" "}
         ou através desse formulário.
@@ -68,7 +68,7 @@ export default function Contact() {
           required
           maxLength={5000}
         />
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center">
           <SubmitBtn />
         </div>
       </form>

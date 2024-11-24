@@ -5,7 +5,7 @@ import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
 
-const resend = new Resend('re_MM57Xwue_9eFR2d8RAgQiXTCpm1nULHAS');
+const resend = new Resend('re_H2L2mSir_MBv5VCbDhTj5p4FAnTUDVUva');
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
@@ -27,11 +27,27 @@ export const sendEmail = async (formData: FormData) => {
   try {
     data = await resend.emails.send({
       from: "Site Portfólio <onboarding@resend.dev>",
-      to: "gustavoguillan23@gmail.com",
-      subject: "Mensagem a respeito dos atendimentos",
+      to: "lumabeatrizpsi@gmail.com",
+      subject: "Nova solicitação de atendimento psicológico",
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
-        message: message,
+        message: `
+          Olá,
+    
+          Você recebeu uma nova mensagem de um potencial paciente interessando em seus serviços de atendimento psicológico.  
+          Aqui estão os detalhes da mensagem:
+    
+          **Mensagem enviada**:
+          "${message}"
+    
+          **Email para contato**: ${senderEmail}
+    
+          Por favor, entre em contato com o remetente para continuar a conversa ou esclarecer dúvidas.  
+          Caso precise de assistência técnica com o site, estamos à disposição.
+    
+          Atenciosamente,  
+          Equipe do Site Portfólio
+        `,
         senderEmail: senderEmail,
       }),
     });
