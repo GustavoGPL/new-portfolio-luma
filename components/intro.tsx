@@ -32,13 +32,13 @@ export default function Intro() {
             }}
           >
             <Image
-              src={'/images/fotoLuma.jpg'}
+              src={'/images/foto-Luma.jpg'}
               alt="Foto Luma"
               width="180"
               height="180"
-              quality="95"
+              quality="100"
               priority={true}
-              className="rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+              className="rounded-full object-cover border-[0.35rem] border-white shadow-xl h-52 w-52"
             />
           </motion.div>
 

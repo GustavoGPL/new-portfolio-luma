@@ -5,7 +5,7 @@ import { Resend } from "resend";
 import { validateString, getErrorMessage } from "@/lib/utils";
 import ContactFormEmail from "@/email/contact-form-email";
 
-const resend = new Resend('re_H2L2mSir_MBv5VCbDhTj5p4FAnTUDVUva');
+const resend = new Resend(process.env.resendAPIKey);
 
 export const sendEmail = async (formData: FormData) => {
   const senderEmail = formData.get("senderEmail");
@@ -32,9 +32,9 @@ export const sendEmail = async (formData: FormData) => {
       reply_to: senderEmail,
       react: React.createElement(ContactFormEmail, {
         message: `
-          Olá,
+          Olá, Luma Beatriz,
     
-          Você recebeu uma nova mensagem de um potencial paciente interessando em seus serviços de atendimento psicológico.  
+          Você recebeu uma nova mensagem de um potencial paciente interessando em seus serviços de atendimento psicológico.
           Aqui estão os detalhes da mensagem:
     
           **Mensagem enviada**:
