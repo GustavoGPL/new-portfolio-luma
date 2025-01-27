@@ -58,7 +58,7 @@ export const projectsData = [
       "Projeto de atendimento psicológico para universitários a preços acessíveis",
     tags: ["praticidade", "flexibilidade", "Acessibilidade"],
     imageUrl: projetoLuma,
-    href: 'https://docs.google.com/forms/d/e/1FAIpQLSfNDqgs2p-XllxeJ7lnK_9c-quj__p0Uqpy00CAE2oDdUe8QQ/viewform'
+    href: 'https://forms.gle/cfenBx4KzeMuxn46A'
   },
 ] as const;
 
