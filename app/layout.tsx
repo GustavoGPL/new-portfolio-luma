@@ -39,7 +39,7 @@ export default function RootLayout({
 
           <div className="absolute bottom-4 right-3 opacity-[0.08] sm:bottom-8 sm:right-8 sm:opacity-[0.1] dark:opacity-[0.08]">
             <Image
-              src="/images/logoLuma.png"
+              src="/images/logoLuma-transparent.png"
               alt="Marca d'agua Luma Beatriz"
               width={160}
               height={160}
