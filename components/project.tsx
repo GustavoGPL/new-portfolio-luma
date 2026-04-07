@@ -30,19 +30,20 @@ export default function Project({
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-5 sm:mb-8 last:mb-0"
     >
       <Link href={href} target="_blank">
-      <section className="bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
-        <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
+      <section className="relative w-full overflow-hidden rounded-3xl border border-[#677C58]/20 bg-white/70 transition hover:-translate-y-1 hover:bg-white/85 sm:h-[20rem] sm:pr-8 sm:group-even:pl-8 dark:bg-white/10 dark:text-white dark:hover:bg-white/15">
+        <div className="flex h-full flex-col px-5 pb-7 pt-6 sm:max-w-[52%] sm:pl-8 sm:pr-2 sm:pt-8 sm:group-even:ml-[18rem]">
+          <span className="brand-chip mb-4 w-fit">Projeto em destaque</span>
+          <h3 className="text-2xl font-semibold text-[#3d4a35] dark:text-[#ecdabf] sm:text-3xl">{title}</h3>
+          <p className="mt-3 leading-relaxed text-[#4b5843] dark:text-white/75">
             {description}
           </p>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-[#677C58] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70"
+                className="rounded-full bg-[#677C58] px-3 py-1 text-[0.68rem] uppercase tracking-wider text-white dark:text-white/80"
                 key={index}
               >
                 {tag}
@@ -55,7 +56,7 @@ export default function Project({
           src={imageUrl}
           alt="Project I worked on"
           quality={95}
-          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+          className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-xl shadow-2xl shadow-[#3d4a35]/30
         transition 
         group-hover:scale-[1.04]
         group-hover:-translate-x-3

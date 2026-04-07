@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 import { useSectionInView } from "@/lib/hooks";
@@ -18,9 +18,8 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="w-full scroll-mt-[100rem] text-center"
     >
-      {/* <div className="flex gap-5 mb-8"> */}
       <div className="flex items-center justify-center">
         <div className="relative">
           <motion.div
@@ -38,7 +37,7 @@ export default function Intro() {
               height="180"
               quality="100"
               priority={true}
-              className="rounded-full object-cover border-[0.35rem] border-white shadow-xl h-52 w-52"
+              className="rounded-full object-cover border-[0.35rem] border-[#f7f3eb] shadow-2xl shadow-[#57694a]/25"
             />
           </motion.div>
 
@@ -57,18 +56,34 @@ export default function Intro() {
         </div>
       </div>
 
+      <motion.div
+        className="mt-5"
+        initial={{ opacity: 0, y: 24 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
+        <span className="brand-chip">Atendimento humanizado</span>
+      </motion.div>
+
       <motion.h1
-        className="flex flex-col mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-8 mt-4 flex flex-col px-4 text-3xl font-medium !leading-[1.2] sm:text-5xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold text-[#57694a] dark:text-[#caa266]">Luma Beatriz Freitas Mesquita</span>
-        <span className="font-bold text-[#57694a] dark:text-[#caa266]">Psicóloga | CRP 11/19857</span>
+        <span className="mt-2 text-xl font-semibold tracking-wide text-[#6f5b3f] dark:text-[#d7b37b] sm:text-2xl">Psicóloga | CRP 11/19857</span>
       </motion.h1>
-      {/* </div> */}
+
+      <motion.p
+        className="mx-auto mb-8 max-w-2xl px-5 text-base leading-7 text-[#4c5c43] dark:text-white/75 sm:text-lg"
+        initial={{ opacity: 0, y: 80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.05 }}
+      >
+        Cuidado psicológico para todas as fases da vida, com escuta acolhedora e estratégias personalizadas para o seu momento.
+      </motion.p>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
+        className="flex flex-col items-center justify-center gap-4 px-1 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -77,9 +92,9 @@ export default function Intro() {
       >
         <Link
           href="https://docs.google.com/forms/d/e/1FAIpQLSevLA_a7AWFXk6SjFSKfBwIh6xMjAX9oemHPhLR7J8xNXRRDw/viewform"
-          className="group bg-[#677C58] text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-[#5c6e4e] active:scale-105 transition"
+          className="group flex items-center gap-2 rounded-full bg-[#677C58] px-8 py-3 text-white outline-none transition hover:scale-105 hover:bg-[#5c6e4e] active:scale-105 focus:scale-105"
           onClick={() => {
-            // setActiveSection("Contato");
+            setActiveSection("Contato");
             setTimeOfLastClick(Date.now());
           }}
         >
@@ -87,18 +102,9 @@ export default function Intro() {
           <BsArrowRight className="opacity-70 group-hover:translate-x-2 transition" />
         </Link>
 
-        {/* <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-          href="/CV.pdf"
-          download
-        >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
-        </a> */}
-
         <div className="flex flex-row gap-2">
           <Link
-            className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/20 dark:text-white/60"
+            className="flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/20 bg-white/75 p-4 text-gray-700 backdrop-blur transition hover:scale-110 hover:text-gray-950 active:scale-105 focus:scale-110 dark:bg-white/15 dark:text-white/80"
             href="https://www.instagram.com/psi_lumabeatriz/"
             target="_blank"
           >
@@ -106,7 +112,7 @@ export default function Intro() {
           </Link>
 
           <Link
-            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/20 dark:text-white/60"
+            className="flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/20 bg-white/75 p-4 text-[1.35rem] text-gray-700 backdrop-blur transition hover:scale-110 hover:text-gray-950 active:scale-105 focus:scale-110 dark:bg-white/15 dark:text-white/80"
             href="https://api.whatsapp.com/send?phone=5585987819145"
             target="_blank"
           >
@@ -114,7 +120,7 @@ export default function Intro() {
           </Link>
 
           <Link
-            className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-110 hover:scale-110 hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/20 dark:text-white/60"
+            className="flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/20 bg-white/75 p-4 text-[1.35rem] text-gray-700 backdrop-blur transition hover:scale-110 hover:text-gray-950 active:scale-105 focus:scale-110 dark:bg-white/15 dark:text-white/80"
             href="mailto:lumabeatrizpsi@gmail.com"
             target="_blank"
           >

@@ -3,11 +3,109 @@
 @tailwind utilities;
 
 html {
+  --bg: #e5e0d8;
+  --bg-soft: #efe9df;
+  --surface: rgba(255, 255, 255, 0.72);
+  --surface-border: rgba(103, 124, 88, 0.25);
+  --text-main: #2f3a2a;
+  --text-soft: #4c5c43;
+  --brand: #677c58;
+  --brand-deep: #57694a;
+  --accent: #caa266;
   --line-color: #e5e7eb;
 }
 
 html.dark {
+  --bg: #121916;
+  --bg-soft: #1a241f;
+  --surface: rgba(17, 23, 20, 0.76);
+  --surface-border: rgba(202, 162, 102, 0.3);
+  --text-main: #f7f5f1;
+  --text-soft: #d9cfc0;
   --line-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  font-family: var(--font-sans), sans-serif;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(103, 124, 88, 0.2), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(202, 162, 102, 0.16), transparent 35%),
+    linear-gradient(165deg, var(--bg) 0%, var(--bg-soft) 100%);
+  color: var(--text-main);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), serif;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: rgba(103, 124, 88, 0.25);
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(70px);
+  opacity: 0.45;
+  animation: float-orb 12s ease-in-out infinite;
+}
+
+.left-orb {
+  width: 22rem;
+  height: 22rem;
+  top: 2rem;
+  left: -4rem;
+  background: rgba(103, 124, 88, 0.5);
+}
+
+.right-orb {
+  width: 20rem;
+  height: 20rem;
+  top: 8rem;
+  right: -5rem;
+  background: rgba(202, 162, 102, 0.45);
+  animation-delay: 1.2s;
+}
+
+@keyframes float-orb {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+}
+
+@layer components {
+  .section-wrap {
+    @apply w-full max-w-[58rem];
+  }
+
+  .page-shell {
+    @apply w-full px-4 py-8 sm:rounded-[2rem] sm:border sm:px-8 sm:py-12;
+    background: var(--surface);
+    border-color: var(--surface-border);
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+  }
+
+  .section-shell {
+    @apply rounded-3xl border p-6 sm:p-8;
+    background: var(--surface);
+    border-color: var(--surface-border);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 18px 50px -30px rgba(44, 54, 39, 0.55);
+  }
+
+  .brand-chip {
+    @apply rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.12em];
+    color: var(--brand-deep);
+    background: rgba(103, 124, 88, 0.15);
+  }
 }
 
 .borderBlack {
@@ -16,4 +114,20 @@ html.dark {
 
 button, a {
   -webkit-tap-highlight-color: transparent;
+}
+
+@media (max-width: 639px) {
+  body {
+    background: var(--surface);
+  }
+
+  .hero-orb {
+    display: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .page-shell {
+    box-shadow: 0 22px 60px -35px rgba(44, 54, 39, 0.6);
+  }
 }

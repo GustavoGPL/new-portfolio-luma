@@ -16,7 +16,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center text-[#46553c] dark:text-[#caa266]"
+      className="w-full mb-4 text-center text-[#46553c] dark:text-[#caa266]"
       initial={{
         opacity: 0,
       }}
@@ -32,9 +32,9 @@ export default function Contact() {
     >
       <SectionHeading>Entre em contato</SectionHeading>
 
-      <p className="text-[#46553c] -mt-6 dark:text-white/80">
+      <p className="-mt-6 text-[#46553c] dark:text-white/80">
       Por favor entre em contato comigo diretamente em{" "}
-        <Link className="underline font-bold" href="mailto:lumabeatrizpsi@gmail.com" target="_blank">
+        <Link className="font-bold underline decoration-[#677C58] underline-offset-4" href="mailto:lumabeatrizpsi@gmail.com" target="_blank">
         lumabeatrizpsi@gmail.com
         </Link>{" "}
         ou através desse formulário.
@@ -54,7 +54,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:placeholder-slate-800"
+          className="h-14 rounded-xl border border-[#677C58]/25 bg-white/75 px-4 transition-all focus:shadow-md focus:shadow-[#57694a]/10 dark:bg-white dark:bg-opacity-80 dark:placeholder-slate-800 dark:focus:bg-opacity-100 dark:outline-none"
           name="senderEmail"
           type="email"
           required
@@ -62,7 +62,7 @@ export default function Contact() {
           placeholder="Seu Email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none dark:placeholder-slate-800"
+          className="my-3 h-52 rounded-xl border border-[#677C58]/25 bg-white/75 p-4 transition-all focus:shadow-md focus:shadow-[#57694a]/10 dark:bg-white dark:bg-opacity-80 dark:placeholder-slate-800 dark:focus:bg-opacity-100 dark:outline-none"
           name="message"
           placeholder="Sua Mensagem"
           required
