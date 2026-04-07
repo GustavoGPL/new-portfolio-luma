@@ -21,7 +21,27 @@ export default function Header() {
         animate={{ y: 0, x: "-50%", opacity: 1 }}
       ></motion.div>
 
-      <div className="fixed top-4 right-4 z-[1001] sm:hidden">
+      <div className="fixed inset-x-0 top-0 z-[1001] flex h-[4.7rem] items-center justify-between px-4 sm:hidden">
+        <Link
+          href="#home"
+          className="group rounded-2xl border border-[#677C58]/20 bg-white/55 px-3 py-2 backdrop-blur-sm transition hover:bg-white/85 dark:border-[#caa266]/30 dark:bg-[#111714]/75 dark:hover:bg-[#111714]"
+          onClick={() => {
+            setActiveSection("Início");
+            setTimeOfLastClick(Date.now());
+            setIsMobileMenuOpen(false);
+          }}
+        >
+          <span className="flex flex-col leading-none">
+            <span className="[font-family:var(--font-display)] text-[1.08rem] font-bold text-[#57694a] dark:text-[#caa266]">
+              Luma Beatriz
+            </span>
+            <span className="mt-1 flex items-center gap-2 [font-family:var(--font-display)] text-[0.9rem] font-semibold tracking-wide text-[#6f5b3f] dark:text-[#d7b37b]">
+              <span className="h-px w-5 bg-[#6f8361]/70 dark:bg-[#c8ae88]/80" />
+              Psicologia Clinica
+            </span>
+          </span>
+        </Link>
+
         <button
           className="flex h-10 w-10 items-center justify-center rounded-full border border-[#677C58]/30 bg-white/80 text-[#57694a] backdrop-blur-md transition hover:scale-105 dark:border-[#caa266]/35 dark:bg-[#111714] dark:text-[#ecdabf]"
           onClick={() => setIsMobileMenuOpen((prev) => !prev)}
@@ -87,7 +107,7 @@ export default function Header() {
             />
 
             <motion.nav
-              className="fixed left-4 right-4 top-16 z-[1000] rounded-2xl border border-[#677C58]/25 bg-white/95 p-3 shadow-xl backdrop-blur-md sm:hidden dark:border-[#caa266]/30 dark:bg-[#111714]/95"
+              className="fixed left-4 right-4 top-[4.4rem] z-[1000] rounded-2xl border border-[#677C58]/25 bg-white/95 p-3 shadow-xl backdrop-blur-md sm:hidden dark:border-[#caa266]/30 dark:bg-[#111714]/95"
               initial={{ opacity: 0, y: -10, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, y: -8, scale: 0.98 }}

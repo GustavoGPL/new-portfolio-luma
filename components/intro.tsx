@@ -91,7 +91,8 @@ export default function Intro() {
         }}
       >
         <Link
-          href="https://docs.google.com/forms/d/e/1FAIpQLSevLA_a7AWFXk6SjFSKfBwIh6xMjAX9oemHPhLR7J8xNXRRDw/viewform"
+          href="https://api.whatsapp.com/send?phone=5585987819145"
+          target="_blank"
           className="group flex items-center gap-2 rounded-full bg-[#677C58] px-8 py-3 text-white outline-none transition hover:scale-105 hover:bg-[#5c6e4e] active:scale-105 focus:scale-105"
           onClick={() => {
             setActiveSection("Contato");
@@ -104,27 +105,27 @@ export default function Intro() {
 
         <div className="flex flex-row gap-2">
           <Link
-            className="flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/20 bg-white/75 p-4 text-gray-700 backdrop-blur transition hover:scale-110 hover:text-gray-950 active:scale-105 focus:scale-110 dark:bg-white/15 dark:text-white/80"
+            className="group flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/30 bg-white/85 p-4 text-[#735C3A] shadow-sm shadow-[#57694a]/10 backdrop-blur transition hover:scale-[1.08] hover:shadow-md hover:shadow-[#57694a]/20 active:scale-105 focus:scale-[1.08] dark:border-[#caa266]/25 dark:bg-white/20 dark:text-[#d7b37b]"
             href="https://www.instagram.com/psi_lumabeatriz/"
             target="_blank"
           >
-            <FaInstagram size={25} color="#735C3A" className="dark:!text-[#caa266]"/>
+            <FaInstagram size={25} className="transition-transform duration-200 group-hover:scale-110" />
           </Link>
 
           <Link
-            className="flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/20 bg-white/75 p-4 text-[1.35rem] text-gray-700 backdrop-blur transition hover:scale-110 hover:text-gray-950 active:scale-105 focus:scale-110 dark:bg-white/15 dark:text-white/80"
+            className="group flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/30 bg-white/85 p-4 text-[1.35rem] text-[#735C3A] shadow-sm shadow-[#57694a]/10 backdrop-blur transition hover:scale-[1.08] hover:shadow-md hover:shadow-[#57694a]/20 active:scale-105 focus:scale-[1.08] dark:border-[#caa266]/25 dark:bg-white/20 dark:text-[#d7b37b]"
             href="https://api.whatsapp.com/send?phone=5585987819145"
             target="_blank"
           >
-            <FaWhatsapp size={25} color="#735C3A" className="dark:!text-[#caa266]"/>
+            <FaWhatsapp size={25} className="transition-transform duration-200 group-hover:scale-110" />
           </Link>
 
           <Link
-            className="flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/20 bg-white/75 p-4 text-[1.35rem] text-gray-700 backdrop-blur transition hover:scale-110 hover:text-gray-950 active:scale-105 focus:scale-110 dark:bg-white/15 dark:text-white/80"
+            className="group flex cursor-pointer items-center gap-2 rounded-full border border-[#677C58]/30 bg-white/85 p-4 text-[1.35rem] text-[#735C3A] shadow-sm shadow-[#57694a]/10 backdrop-blur transition hover:scale-[1.08] hover:shadow-md hover:shadow-[#57694a]/20 active:scale-105 focus:scale-[1.08] dark:border-[#caa266]/25 dark:bg-white/20 dark:text-[#d7b37b]"
             href="mailto:lumabeatrizpsi@gmail.com"
             target="_blank"
           >
-            <IoMailOutline size={25} color="#735C3A" className="dark:!text-[#caa266]"/>
+            <IoMailOutline size={25} className="transition-transform duration-200 group-hover:scale-110" />
           </Link>
         </div>
       </motion.div>
